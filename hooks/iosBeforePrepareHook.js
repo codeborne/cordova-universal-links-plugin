@@ -26,7 +26,7 @@ function run(ctx) {
   var oldProjectName = getOldProjectName(iosProjectFilePath);
 
   // if name has not changed - do nothing
-  if (oldProjectName.length && oldProjectName === newProjectName) {
+  if (!oldProjectName.length || oldProjectName === newProjectName) {
     return;
   }
 
